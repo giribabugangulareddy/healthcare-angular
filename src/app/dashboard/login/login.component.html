@@ -1,0 +1,42 @@
+<!-- parent and child class are used to set the center of the screen for login box-->
+<div class="parent main">
+    <div class="child">
+       <!-- the login form fields starting -->
+        <div class="shadow">
+            <h3 class="mar-btm">User Login</h3>
+            <form [formGroup]="loginForm" (onSubmit)="login()">
+
+                <!-- user Email -->
+
+                <div class="formfield pad-btm-10">
+                    <mat-form-field appearance="outline" >
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="email" formControlName="userEmail">
+
+                    </mat-form-field>
+                    <mat-error class="text-left">
+                        {{getErrMsg('userEmail',' email')}}
+                    </mat-error>
+                </div>
+
+                  <!-- user password -->
+
+                <div class="formfield pad-btm-10">
+                    <mat-form-field appearance="outline" class="">
+                        <mat-label>Password</mat-label>
+                        <input type="password" matInput placeholder="Password" formControlName="userPassword">
+
+                    </mat-form-field>
+                    <mat-error class="text-left">
+                        {{getErrMsg('userPassword','password')}} 
+                    </mat-error>
+                </div>
+                <!-- onSubmmit button -->
+                <div class="mar-btm" >
+                    <button  class="btn btn-primary btn-block" (click)="login()">Login</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

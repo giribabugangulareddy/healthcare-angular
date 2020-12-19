@@ -1,0 +1,99 @@
+
+/* b-tb is banner table and b-tb-c is bannner table container */
+.b-tb {
+    display: table;
+    height: 100%;
+    width: 100%;
+    float: left;
+}
+.b-tb-c {
+    display: table-cell;
+    vertical-align: middle;
+}
+.title{
+    font-size: 4.4rem;
+    line-height: 1.2;
+    color: #000;
+}
+ p{
+    color: #000;
+}
+.bg-clr{
+    background-color: #f1f7fa; 
+}
+.banner-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+
+.banner-caption{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+}
+
+.box-pad{
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.img-fluid{
+    object-fit: contain;
+    width: 370px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+}
+figcaption{
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000
+}
+.pad20{
+    padding:20px;
+}
+@media screen and (max-width:1200px){
+    .img-fluid{
+        width: 300px;
+    }
+}
+@media screen and (max-width:992px){
+    .img-fluid{
+        width: 230px;
+    }
+}
+@media screen and (max-width:767px){
+    .img-fluid{
+        width: 370px;
+    }
+    .box-pad{
+        text-align: center;
+    }
+}
+@media screen and (max-width:480px){
+    .img-fluid{
+        width: 250px;
+    }
+    .img-responsive{
+        height: 20em;
+        object-fit: cover;
+    }
+    .title{
+        font-size: 2.4rem;
+    }
+    p{
+        font-size: 11px;
+    }
+}

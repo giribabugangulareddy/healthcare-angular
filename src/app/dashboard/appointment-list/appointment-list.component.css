@@ -1,0 +1,123 @@
+
+/*  */
+.card{
+    background: #fff;
+    border: 1px solid #e4e9f0;
+    width: 100%;
+    min-width: 100%;
+
+}  
+.bg-color{
+    background-color: #f8f9fb;
+}
+
+.grid-margin {
+    margin-bottom: 30px;
+}
+.font-weight-normal {
+    font-weight: 400 !important;
+}
+.icon{
+    color: #ff0854 !important;
+    font-size: 2.5rem;
+}
+
+.stretch-card{
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+}
+.container-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+.box{
+    width: 13%;
+    height: 100px;
+    background: yellow;
+    margin: 20px;
+    box-sizing: border-box;
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+   
+  }
+.flex-item-left {
+    
+    padding: 0px;
+    flex: 20%;
+    
+  }
+  
+.flex-item-right {
+    padding: 0px 0px 0 20px;
+    flex: 80%;
+  }
+
+  .docotor-gride{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .item-bg-clr{
+    background: #fff;
+    border: 1px solid #e4e9f0;
+
+  }
+
+  .flex-chil-container{
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid #e4e9f0;
+  }
+  table {
+    width: 100%;
+  }
+  .table-title{
+    padding: 14px;
+    font-size: 20px;
+  }
+  .pad-10{
+      padding: 15px;
+  }
+  .font-sise-18{
+      font-size: 18px;
+      text-align: center;
+  }
+  .doctor-list{
+    padding: 5px 0;
+    border-bottom: 1px solid #e4e9f0;
+    text-align: center;
+  }
+  .doctor-list img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 14px;
+}
+.fnt-16{
+    font-size: 16px;
+}
+
+/* responsive code of hospital cards */
+@media screen and (max-width:1200px){
+    .box{
+        width: 25%;
+    }
+    .container{
+        justify-content:center;
+    }
+}
+
+@media screen and (max-width:600px){
+    .box{
+        width: 70%;
+    }
+}

@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-elevation-z8{
+    box-shadow: none !important;
+    background: #fff;
+}
+.formfield .mat-form-field {
+    width: 100%;
+  }
+  .formfields .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 1.4em 0 !important;
+  
+  }
+  .pad-btm-10 {
+    padding-bottom: 10px;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-outline{
+    background: #ffffffb8;
+  }

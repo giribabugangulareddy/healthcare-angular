@@ -1,0 +1,41 @@
+
+
+
+<div class="container">
+    <nav class="navbar navbar-defulat">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle" (click)="toggleNavbarCollapsing()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a>
+                <img src="../../../assets/logo.png" class="img-fluid">
+            </a>
+        </div>
+        <!-- Collection of nav links, and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse"  [class.collapse]="navbarCollapsed">
+            <ul class="nav navbar-nav">
+                <li class="active" ><a routerLink="/dash/home">Home</a></li>
+                <li><a >About</a></li>
+                <li><a >Department</a></li>
+                <li><a >Doctors</a></li>
+                <li><a >Contact</a></li>
+
+            </ul>
+            <!-- navibar right side appoinment button -->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="pad-10" ><a routerLink="/dash/login">Login</a></li>
+                <li>
+                    <a  class="action-items-primary-btn" routerLink="/dash/create">Appointment<i class="fas fa-chevron-right"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+   
+</div>
+
+

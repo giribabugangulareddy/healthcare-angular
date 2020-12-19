@@ -1,0 +1,119 @@
+/* form-select-arrow fields alignments css*/
+.form-select-arrow.lg ,.form-field{
+    height: 45px;
+    margin-left: 0;
+    margin-bottom: 20px;
+    padding: .4375rem .75rem;
+    outline: none;
+    color: #3e3a3a;
+    
+}
+.fd-clr{
+background: #f8f9fb;
+}
+::placeholder {
+    color: #636262;
+    opacity: 1; /* Firefox */
+  }
+.card-body {
+    padding: 30px 28px;
+    border:1px solid #ccc;
+}
+.bg-color{
+    background-color: #f8f9fb;
+}
+/* form-select arrow image css*/
+.form-select-arrow {
+    min-width: 124px;
+    background: url(../../../assets//arrow.svg) no-repeat 95% 50%;
+    background-size: 13px 15px;
+    appearance: none;
+    outline-width: 0;
+    font-size: 14px;
+    color: #757575;
+}
+.card-title {
+    color: #313131;
+    margin-bottom: 2.75rem;
+    text-transform: capitalize;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+.btn-facebook,.btn-facebook:hover, .btn-facebook:focus {
+    background: #2d4278;
+    color: #ffffff;
+    font-size: 15px;
+}
+.text-small {
+    font-size: 12px;
+    margin-top: 10px;
+}
+.title-banner {
+    background: #0033c4;
+    padding: 20px 25px;
+    color: #ffffff;
+    width: 100%;
+    display: flex;
+}
+.title-banner img{
+    width: 145px;
+    object-fit: cover;
+    margin-left: 15px;
+}
+.time-banner{
+    padding: 28px 20px;
+    display: flex;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+.border-right{
+    border-right: 1px solid #e4e9f0 !important;
+    padding-right: 1rem !important;
+}
+.time-banner p {
+    font-size: 12px;
+    color: #0033c4;
+}
+.time-banner i {
+    font-size: 30px;
+    color: #0033c4;
+}
+.pad-lf-20{
+    padding-left: 28px;
+    margin-top: 1em;
+}
+.font-weight-normal{
+    font-size: 14px;
+    font-weight: normal;
+}
+.mar-top-time{
+    margin-top: 2em;
+}
+.mar-top{
+    margin-top: 4em;
+}
+.pad-btm{
+    padding-bottom: 4em;
+}
+
+
+@media screen and (max-width:767px){
+    .title-banner{
+        margin-top: 2em;
+        
+    }
+    .res-pad-0{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:480px){
+    .title-banner{
+        display: block !important;
+    }
+    .img-responsive{
+        height: 9em;
+        object-fit: cover;
+    }
+}

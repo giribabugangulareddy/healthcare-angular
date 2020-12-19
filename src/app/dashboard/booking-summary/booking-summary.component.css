@@ -1,0 +1,27 @@
+.bg-clr{
+    background-color: #f1f7fa; 
+   
+}
+
+.pad-15{
+    padding: 25px;
+    margin-bottom: 0;
+}
+.space-align{
+    padding: 45px;
+    font-size: 16px;
+   
+}
+.wd-100{
+    width: 100%;
+}
+.clr{
+    border-color:#000;
+}
+
+@media only screen and (max-width: 479px) {
+    .space-align{
+        font-size: 14px;
+        padding: 35px;
+    }
+}

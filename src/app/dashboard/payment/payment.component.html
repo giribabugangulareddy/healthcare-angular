@@ -1,0 +1,92 @@
+<div class="bg-clr">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 br-box">
+                <div class="pos">
+                    <h2 class="text-center pad-15">Payment Details</h2>
+
+                    <form [formGroup]="paytemForm" (ngSubmit)="onSubmit()">
+
+                        <!-- Card Name -->
+
+                        <div class="form-row">
+                            <div class="col-xs-12 form-group">
+                                <label class="control-label">Card Name </label>
+                                <input class="form-control  form-field " type="text" formControlName="cardName">
+                                <div class="text-danger"
+                                    *ngIf="(paytemFormControl.cardName.touched || submitted) && paytemFormControl.cardName.errors?.required">
+                                    Card Name is required
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Card Number -->
+
+                        <div class="form-row">
+                            <div class="col-xs-12 form-group card ">
+                                <label class="control-label">Card Number</label>
+                                <input class="form-control  form-field " type="text" formControlName="cardNumber">
+                                <div class="text-danger"
+                                    *ngIf="(paytemFormControl.cardNumber.touched || submitted) && paytemFormControl.cardNumber.errors?.required">
+                                    card Number is required
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Card CVC -->
+
+                        <div class="form-row">
+                            <div class="col-xs-4 form-group cvc ">
+                                <label class="control-label">CVC</label>
+                                <input class="form-control  form-field " placeholder="ex. 311" size="4" type="text"
+                                    formControlName="cvc">
+                                <div class="text-danger"
+                                    *ngIf="(paytemFormControl.cvc.touched || submitted) && paytemFormControl.cvc.errors?.required">
+                                    CVC is required
+                                </div>
+                            </div>
+
+                            <!-- Card Month -->
+
+                            <div class="col-xs-4 form-group ">
+                                <label class="control-label">Expiration</label>
+                                <input class="form-control  form-field  card-expiry-month" placeholder="MM" size="2"
+                                    type="text" formControlName="month">
+                                <div class="text-danger"
+                                    *ngIf="(paytemFormControl.month.touched || submitted) && paytemFormControl.month.errors?.required">
+                                    Month is required
+                                </div>
+                            </div>
+
+                            <!-- Card Month -->
+
+                            <div class="col-xs-4 form-group ">
+                                <label class="control-label"> </label>
+                                <input class="form-control  form-field  card-expiry-year" placeholder="YYYY" size="4"
+                                    type="text" formControlName="year">
+                                <div class="text-danger"
+                                    *ngIf="(paytemFormControl.year.touched || submitted) && paytemFormControl.year.errors?.required">
+                                    Year is required
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- onSubmit button -->
+
+                        <div class="form-row">
+                            <div class="col-md-12 form-group">
+                                <button class="form-control  form-field  btn btn-primary align-btn" type="submit">Pay
+                                    »</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+    </div>
+</div>

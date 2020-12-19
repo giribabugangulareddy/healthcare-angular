@@ -1,0 +1,39 @@
+.navbar-nav{
+    padding: 10px;
+}
+
+/* appoinment button css */
+
+.action-items-primary-btn{
+    font-size: 13px;
+    display: inline-block;
+    padding: 12px 20px;
+    color: #ffffff;
+    background-color: #396cf0;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid;
+    border-color: #396cf0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease-out;
+}
+.action-items-primary-btn:hover{
+    border-color:#396cf0;
+    color: #396cf0 ;
+    background: #fff;
+}
+body{
+    color: #000;
+}
+
+.pad-10{
+    padding: 0 15px;
+   cursor: pointer;
+}
+.navbar-toggle{
+	background-color: #396cf0 !important;
+}
+.navbar-toggle .icon-bar{
+	background: #fff !important;
+}

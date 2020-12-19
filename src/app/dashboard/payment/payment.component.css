@@ -1,0 +1,23 @@
+.bg-clr{
+    background-color: #f1f7fa; 
+    height: 90vh;
+}
+.pad-15{
+    padding: 0 20px 20px;
+}
+.br-box{
+    padding: 25px;
+}
+.form-field {
+    height: 45px;
+    margin-left: 0;
+    /* margin-bottom: 20px; */
+    padding: .4375rem .75rem;
+    outline: none;
+    color: #3e3a3a;
+}
+.align-btn, .align-btn:hover,.align-btn:focus{
+    outline: none;
+    color: #fff;
+    font-size: 20px;
+}

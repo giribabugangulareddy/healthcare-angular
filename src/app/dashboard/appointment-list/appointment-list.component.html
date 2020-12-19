@@ -1,0 +1,160 @@
+<!--  -->
+<div class="bg-color">
+    <!-- staring of hospital info cards -->
+    <div class="container">
+        <div class="container-box">
+            <div class="box">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <span class="mdi mdi-stethoscope icon"></span>
+                        <h5 class="font-weight-normal">Doctors</h5>
+                        <h5>3,973</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <span class="mdi mdi-ambulance  icon"></span>
+                        <h5 class="font-weight-normal">Patients</h5>
+                        <h5>4353</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <span class="mdi mdi-human-child icon"></span>
+                        <h5 class="font-weight-normal">Nurses</h5>
+                        <h5>433</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <span class="mdi mdi-medical-bag  icon"></span>
+                        <h5 class="font-weight-normal">Pharmacist</h5>
+                        <h5>433</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <span class="mdi mdi-calendar-clock  icon"></span>
+                        <h5 class="font-weight-normal">New events</h5>
+                        <h5>433</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <span class="mdi mdi-file-document icon"></span>
+                        <h5 class="font-weight-normal">Reports</h5>
+                        <h5>433</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- ending of hospital info cards -->
+
+
+    <div class="container">
+        <div class="docotor-gride">
+            <div class="flex-container">
+                <!-- staring of doctors list left side cards -->
+                <div class="flex-item-left">
+                    <div class="item-bg-clr">
+                        <div class="flex-chil-container">
+                            <div class="pad-10">
+                                <h5 class="font-sise-18">Doctors List</h5>
+                                <div class="doctor-list">
+                                    <img src="../../../assets/doctor3.jpg">
+                                    <div>
+                                        <h6>Dr.Kita Chihoko</h6>
+                                        <p class="fnt-16">Cardiology</p>
+                                    </div>
+                                </div>
+                                <div class="doctor-list">
+                                    <img src="../../../assets/doctor5.png">
+                                    <div>
+                                        <h6>Dr.Freddy</h6>
+                                        <p class="fnt-16">gynaecology</p>
+                                    </div>
+                                </div>
+                                <div class="doctor-list">
+                                    <img src="../../../assets/doctor6.jpg">
+                                    <div>
+                                        <h6>Dr.Richard</h6>
+                                        <p class="fnt-16">Orthopedic</p>
+                                    </div>
+                                </div>
+                                <div class="doctor-list">
+                                    <img src="../../../assets/doctor7.jpg">
+                                    <div>
+                                        <h6>Dr.Herman Beck</h6>
+                                        <p class="fnt-16">Pediatric</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ending of doctors list left side cards -->
+
+                <div class="flex-item-right">
+                    <div class="item-bg-clr">
+                        <p class="table-title">Recent Appointments</p>
+                        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                            <!--- Note that these columns can be defined in any order.
+                                  The actual rendered columns are set as a property on the row definition" -->
+
+                            <!-- sno Column -->
+                            <ng-container matColumnDef="sno">
+                                <th mat-header-cell *matHeaderCellDef> No. </th>
+                                <td mat-cell *matCellDef="let element"> {{element.sno}} </td>
+                            </ng-container>
+
+
+                            <!-- Patient Column -->
+                            <ng-container matColumnDef="Patient">
+                                <th mat-header-cell *matHeaderCellDef> Patient </th>
+                                <td mat-cell *matCellDef="let element"> {{element.Patient}} </td>
+                            </ng-container>
+
+                            <!-- Doctor Column -->
+                            <ng-container matColumnDef="Doctor">
+                                <th mat-header-cell *matHeaderCellDef> Doctor </th>
+                                <td mat-cell *matCellDef="let element"> {{element.Doctor}} </td>
+                            </ng-container>
+
+                            <!-- Date Column -->
+                            <ng-container matColumnDef="Date">
+                                <th mat-header-cell *matHeaderCellDef> Date </th>
+                                <td mat-cell *matCellDef="let element"> {{element.Date}} </td>
+                            </ng-container>
+
+                            <!-- Timing Column -->
+                            <ng-container matColumnDef="Timing">
+                                <th mat-header-cell *matHeaderCellDef> Timing </th>
+                                <td mat-cell *matCellDef="let element"> {{element.Timing}} </td>
+                            </ng-container>
+
+                             <!-- Contact Column -->
+                            <ng-container matColumnDef="Contact">
+                                <th mat-header-cell *matHeaderCellDef> Contact </th>
+                                <td mat-cell *matCellDef="let element"> {{element.Contact}} </td>
+                            </ng-container>
+
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

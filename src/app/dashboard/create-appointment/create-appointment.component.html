@@ -1,0 +1,88 @@
+<!--  -->
+<div class="bg-color">
+    <!-- banner image  -->
+    <div class="baner">
+        <img src="../../../assets/doctor4.png" class="img-responsive">
+    </div>
+    <div class="mar-top"></div>
+    <div class="container">
+        <!-- Appointment form starting -->
+        <div class="col-sm-4">
+            <div class="card-body">
+                <h5 class="card-title">Make An Appointment</h5>
+                <form [formGroup]="appoinmentForm" (ngSubmit)="create()">
+                    <div class="form-row">
+                        <div class=" form-group ">
+                            
+                            <input class="form-control form-field fd-clr" type="text" placeholder="Patient Name" formControlName="patientName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group card ">
+                           
+                            <input  class="form-control form-field fd-clr"  type="text" placeholder="Phone Number" formControlName="mobile" required>
+                        </div>
+                    </div>
+                    <select class="form-control form-select-arrow lg" formControlName="service">
+                        <option [selected]="true" disabled>Choose Service</option>
+                        <option *ngFor="let x of service">{{x}}</option>
+
+                    </select>
+                    <select class="form-control form-select-arrow lg" formControlName="doctors">
+                        <option [selected]="true" disabled>Select Doctor</option>
+                        <option *ngFor="let doctor of doctors">{{doctor}}</option>
+
+                    </select>
+                    <select class="form-control form-select-arrow lg" formControlName="dates">
+                        <option [selected]="true" disabled>Select Date</option>
+                        <option *ngFor="let date of dates">{{date}}</option>
+
+                    </select>
+                    <select class="form-control form-select-arrow lg" formControlName="times">
+                        <option [selected]="true" disabled>Desirable time</option>
+                        <option *ngFor="let time of times">{{time}}</option>
+
+                    </select>
+                    <select class="form-control form-select-arrow lg" formControlName="fee" >
+                        <option [selected]="true" disabled>Appoinment fee</option>
+                        <option value=200>Rs 200/-</option>
+
+                    </select>
+                    <button type="submit" class="btn btn-facebook btn-lg">Check now</button>
+                    <p class="text-muted text-small mt-2 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                </form>
+                <!-- Appointment form ending -->
+            </div>
+        </div>
+        <!-- for right side doctor info -->
+        <div class="col-sm-8 ">
+            <div class="col-sm-12 res-pad-0">
+                <div class="title-banner ">
+                    <div>
+                        <h3>How are feeling today ?</h3>
+                        <p>Get unlimited doctor consultations and much more with plusadmin</p>
+                    </div>
+                    <img src="../../../assets/consulting.png">
+                </div>
+
+            </div>
+
+        </div>
+        <!-- hospital opening times -->
+        <div class="col-sm-5 mar-top-time res-pad-0">
+            <div class="col-sm-12">
+                <div class="time-banner">
+                    <div class="text-center border-right ">
+                        <i class="mdi mdi-clock-outline"></i>
+                        <h6 class="m-0 font-weight-normal">Open Hours</h6>
+                    </div>
+                    <div class="pad-lf-20">
+                        <p>Monday-Saturday: 10.00 - 24.00</p>
+                        <p>Sunday: 12.00 - 18.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pad-btm"></div>
+</div>

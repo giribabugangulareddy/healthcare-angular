@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <div class="bg-clr" >
+                <h2 class="text-center pad-15">Booking Summary</h2>
+
+                <div >
+                    <div class="col-sm-12 space-align bg-clr" *ngFor="let x of sourceData">
+                        <p><span>Doctor Name</span> <span class="pull-right">{{x.doctors}}</span></p>
+                        <p><span>Patient Name</span> <span class="pull-right">{{x.patientName}}</span></p>
+                        <p><span>Service </span> <span class="pull-right">{{x.service}}</span></p>
+                        <p><span>Date</span> <span class="pull-right">{{x.dates}}</span></p>
+                        <p><span>Time</span> <span class="pull-right">{{x.times}}</span></p>
+                        <p><span>Consulting fee </span> <span class="pull-right"> ₹{{x.fee}} /-</span></p>
+                        <p><span>Booking fee(10%) </span> <span class="pull-right">₹{{basicfee}} /-</span></p>
+                        <hr class="clr">
+                        <p><span>Total fee</span> <span class="pull-right">Rs {{totalfee}} /-</span></p>
+                        <button class="btn btn-primary wd-100" routerLink="/dash/payment">Make Payment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+
+</div>
