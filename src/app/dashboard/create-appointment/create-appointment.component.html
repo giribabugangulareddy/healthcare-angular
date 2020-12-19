@@ -11,45 +11,69 @@
             <div class="card-body">
                 <h5 class="card-title">Make An Appointment</h5>
                 <form [formGroup]="appoinmentForm" (ngSubmit)="create()">
+                    <!-- Patient Name -->
                     <div class="form-row">
                         <div class=" form-group ">
-                            
-                            <input class="form-control form-field fd-clr" type="text" placeholder="Patient Name" formControlName="patientName" required>
+                            <input class="form-control form-field fd-clr" type="text" placeholder="Patient Name"
+                                formControlName="patientName" required>
+                            <small>{{getErrMsg('patientName',' Patient Name')}}</small>
                         </div>
                     </div>
+                    <!-- Phone Number -->
                     <div class="form-row">
                         <div class="form-group card ">
-                           
-                            <input  class="form-control form-field fd-clr"  type="text" placeholder="Phone Number" formControlName="mobile" required>
+                            <input class="form-control form-field fd-clr" type="text" placeholder="Phone Number"
+                                formControlName="mobile" required>
+                            <small>{{getErrMsg('mobile',' Phone Number')}}</small>
                         </div>
                     </div>
-                    <select class="form-control form-select-arrow lg" formControlName="service">
-                        <option [selected]="true" disabled>Choose Service</option>
-                        <option *ngFor="let x of service">{{x}}</option>
+                    <!-- Service -->
+                    <div>
+                        <select class="form-control form-select-arrow lg" formControlName="service">
+                            <option [selected]="true" disabled>Choose Service</option>
+                            <option *ngFor="let x of service">{{x}}</option>
+                        </select>
+                        <small> {{getErrMsg('service',' service')}}</small>
+                    </div>
+                    <!-- Doctors -->
+                    <div>
+                        <select class="form-control form-select-arrow lg" formControlName="doctors">
+                            <option [selected]="true" disabled>Select Doctor</option>
+                            <option *ngFor="let doctor of doctors">{{doctor}}</option>
+                        </select>
+                        <small>{{getErrMsg('doctors',' Doctors')}}</small>
+                    </div>
+                    <!-- Date -->
+                    <div>
+                        <select class="form-control form-select-arrow lg" formControlName="dates">
+                            <option [selected]="true" disabled>Select Date</option>
+                            <option *ngFor="let date of dates">{{date}}</option>
+                        </select>
+                        <small> {{getErrMsg('dates',' Date')}}</small>
+                    </div>
+                    <!-- Time -->
+                    <div>
+                        <select class="form-control form-select-arrow lg" formControlName="times">
+                            <option [selected]="true" disabled>Desirable time</option>
+                            <option *ngFor="let time of times">{{time}}</option>
+                        </select>
+                        <small>{{getErrMsg('times',' Time')}}</small>
+                    </div>
+                    <!-- Appoinment fee -->
+                    <div>
+                        <select class="form-control form-select-arrow lg" formControlName="fee">
+                            <option [selected]="true" disabled>Appoinment fee</option>
+                            <option value=200>Rs 200/-  &nbsp; (Child)</option>
+                            <option value=400>Rs 400/-  &nbsp; (Adult)</option>
+                        </select>
+                        <small>{{getErrMsg('fee',' Fee')}}</small>
+                    </div>
 
-                    </select>
-                    <select class="form-control form-select-arrow lg" formControlName="doctors">
-                        <option [selected]="true" disabled>Select Doctor</option>
-                        <option *ngFor="let doctor of doctors">{{doctor}}</option>
-
-                    </select>
-                    <select class="form-control form-select-arrow lg" formControlName="dates">
-                        <option [selected]="true" disabled>Select Date</option>
-                        <option *ngFor="let date of dates">{{date}}</option>
-
-                    </select>
-                    <select class="form-control form-select-arrow lg" formControlName="times">
-                        <option [selected]="true" disabled>Desirable time</option>
-                        <option *ngFor="let time of times">{{time}}</option>
-
-                    </select>
-                    <select class="form-control form-select-arrow lg" formControlName="fee" >
-                        <option [selected]="true" disabled>Appoinment fee</option>
-                        <option value=200>Rs 200/-</option>
-
-                    </select>
-                    <button type="submit" class="btn btn-facebook btn-lg">Check now</button>
-                    <p class="text-muted text-small mt-2 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    <div class="mrtop">
+                        <button type="submit" class="btn btn-facebook btn-lg" (click)="create()">Check now</button>
+                        <p class="text-muted text-small mt-2 mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        </p>
+                    </div>
                 </form>
                 <!-- Appointment form ending -->
             </div>

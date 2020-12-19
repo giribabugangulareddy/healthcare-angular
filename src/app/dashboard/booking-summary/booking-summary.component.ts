@@ -14,20 +14,23 @@ export class BookingSummaryComponent implements OnInit {
   public basicfee;
   public totalfee;
   ngOnInit(): void {
+
+    // push the getDataSource from shared service
+
     this.sourceData.push(this.sharedService.getDataSource())
+
     console.log('this.data', this.sourceData)
 
+    // Booking charges calculate 10% on doctor fee 
     this.sourceData.forEach(element => {
-      console.log('element', element)
+      
       this.basicfee = ((element.fee * 10) / 100)
       this.totalfee = Number(this.basicfee) + Number(element.fee)
-      console.log('showfee', this.basicfee, this.totalfee)
+    
 
     })
   }
 
-  calculation() {
-
-  }
+ 
 
 }

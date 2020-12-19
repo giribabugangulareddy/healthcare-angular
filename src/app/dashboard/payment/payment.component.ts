@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
 
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class PaymentComponent implements OnInit {
   paytemForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router:Router) { }
+  constructor(private fb: FormBuilder, private router:Router, private _snackBar: MatSnackBar) { }
 
   submitted = false;
 
@@ -39,6 +40,14 @@ export class PaymentComponent implements OnInit {
     if (this.paytemForm.valid) {
       this.router.navigate(['/dash/home'])
       console.table(this.paytemForm.value);
+      this.openSnackBar(' Successfuly Booked appointment','success')
     }
+  }
+
+  // form validation
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    });
   }
 }

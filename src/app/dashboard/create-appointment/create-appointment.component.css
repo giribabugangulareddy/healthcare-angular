@@ -2,11 +2,14 @@
 .form-select-arrow.lg ,.form-field{
     height: 45px;
     margin-left: 0;
-    margin-bottom: 20px;
+    margin-top: 20px;
     padding: .4375rem .75rem;
     outline: none;
     color: #3e3a3a;
     
+}
+.mrtop{
+    margin-top: 1em;
 }
 .fd-clr{
 background: #f8f9fb;
@@ -96,7 +99,9 @@ background: #f8f9fb;
 .pad-btm{
     padding-bottom: 4em;
 }
-
+small{
+    color: red;
+}
 
 @media screen and (max-width:767px){
     .title-banner{

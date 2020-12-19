@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  [x: string]: any;
+  // [x: string]: any;
   public loginForm: FormGroup;
   public submitted: Boolean = false;
   public passwordPassword
