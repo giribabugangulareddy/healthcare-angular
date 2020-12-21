@@ -81,6 +81,14 @@ figcaption{
     .box-pad{
         text-align: center;
     }
+    .title{
+        font-size: 3.4rem;
+    }
+}
+@media screen and (max-width:599px){
+    .title{
+        font-size: 3rem;
+    }
 }
 @media screen and (max-width:480px){
     .img-fluid{

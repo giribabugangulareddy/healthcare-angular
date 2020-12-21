@@ -9,13 +9,14 @@ export class SharedService {
 
   constructor() { }
 
-  // 
+  // data recived from create appointment component 
   setDataSource(data){
     console.log('dataaaaaa', data)
     this.message = data
   }
 
 
+  // send the data to booking - summary component
   getDataSource(){
 
     return this.message
