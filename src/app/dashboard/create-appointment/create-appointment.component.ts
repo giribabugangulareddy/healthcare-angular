@@ -30,7 +30,7 @@ export class CreateAppointmentComponent implements OnInit {
     this.appoinmentForm = this.formBuilder.group({
       patientName: ['', Validators.required],
       service: ['', Validators.required],
-      mobile: ['', Validators.required],
+      mobile: ['', [Validators.required, Validators.minLength(9)]],
       doctors:['', Validators.required],
       dates: ['', Validators.required],
       times:['', Validators.required],
@@ -68,7 +68,17 @@ export class CreateAppointmentComponent implements OnInit {
   getErrMsg(formControl, msg) {
     console.log('formControl, msg',formControl, msg, this.submitted)
     if (this.appoinmentForm.get(formControl).touched || this.submitted) {
-      return this.appoinmentForm.get(formControl).hasError('required') ? 'You must enter ' + msg :'';
+      return this.appoinmentForm.get(formControl).hasError('required') ? 'You must enter ' + msg :
+      this.appoinmentForm.get(formControl).hasError('minlength') ? 'must be 10 digits' :  '';
+    }
+  }
+
+  // number validation
+  keyPress(event: any) {
+    const pattern = /[0-9\+\-\ ]/;
+    let inputChar = String.fromCharCode(event.charCode);
+    if (event.keyCode != 8 && !pattern.test(inputChar)) {
+      event.preventDefault();
     }
   }
 }

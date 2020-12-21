@@ -22,8 +22,8 @@
                     <!-- Phone Number -->
                     <div class="form-row">
                         <div class="form-group card ">
-                            <input class="form-control form-field fd-clr" type="text" placeholder="Phone Number"
-                                formControlName="mobile" required>
+                            <input class="form-control form-field fd-clr" type="text" placeholder="Phone Number" 
+                                formControlName="mobile" (keypress)=keyPress($event) maxLength="10" required>
                             <small>{{getErrMsg('mobile',' Phone Number')}}</small>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                             <option [selected]="true" disabled>Choose Service</option>
                             <option *ngFor="let x of service">{{x}}</option>
                         </select>
-                        <small> {{getErrMsg('service',' service')}}</small>
+                        <small> {{getErrMsg('service',' Service')}}</small>
                     </div>
                     <!-- Doctors -->
                     <div>

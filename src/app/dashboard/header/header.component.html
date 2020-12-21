@@ -26,11 +26,15 @@
 
             </ul>
             <!-- navibar right side appoinment button -->
-            <ul class="nav navbar-nav navbar-right">
-                <li class="pad-10" ><a routerLink="/dash/login">Login</a></li>
+            <ul class="nav navbar-nav navbar-right" *ngIf="!hasRoute('/dash/appointment-list') ">
+                <li class="pad-10" *ngIf="!hasRoute('/dash/login')"><a routerLink="/dash/login">Login</a></li>
                 <li>
                     <a  class="action-items-primary-btn" routerLink="/dash/create">Appointment<i class="fas fa-chevron-right"></i></a>
                 </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" *ngIf="hasRoute('/dash/appointment-list') ">
+                <li class="pad-10" *ngIf="!hasRoute('/dash/home')"><a routerLink="/dash/login">Log Out</a></li>
+               
             </ul>
         </div>
     </nav>

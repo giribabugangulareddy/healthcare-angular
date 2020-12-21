@@ -23,4 +23,10 @@ export class HeaderComponent implements OnInit {
     this.navbarCollapsed = !this.navbarCollapsed;
 
   }
+
+  // hide login button based on route
+  hasRoute(route: string) {
+    console.log(this.router.url.includes(route))
+    return this.router.url.includes(route);
+  }
 }
